@@ -132,7 +132,7 @@ def build_unet(input_shape):
 
     outputs = Conv2D(1, 1, padding="same", activation="sigmoid")(d4)
 
-    model = Model(inputs, outputs, name="U-Net")
+    model = Model(inputs, outputs, name="Unet")
     return model
 
 # Dice Loss function
@@ -214,3 +214,5 @@ if __name__ == "__main__":
     )
 
     evaluate()
+
+    model.save("Unet.h5")
